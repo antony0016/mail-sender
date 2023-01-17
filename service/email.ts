@@ -21,7 +21,8 @@ export default {
             from: `${payload.who}@mail.soic.org.tw`,
             to: payload.to,
             subject: `[${payload.who}] ${payload.subject}`,
-            html: payload.text,
+            text: `<p>${payload.text}</p>`,
+            html: `<p>${payload.text}</p>`,
         }, (error, info) => {
             console.log(error);
             console.log(info);
