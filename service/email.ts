@@ -18,7 +18,7 @@ export default {
     ) => {
         let result = null
         await transporter.sendMail({
-            from: `${payload.who}@mail.soic.org.tw`,
+            from: `${payload.who}@soic.org.tw`,
             to: payload.to,
             subject: `[${payload.who}] ${payload.subject}`,
             text: `<p>${payload.text}</p>`,
