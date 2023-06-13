@@ -22,9 +22,9 @@ export default {
     ) => {
         let result = null
         await transporter.sendMail({
-            from: `${payload.who}@soic.org.tw`,
+            from: payload.who,
             to: payload.to,
-            subject: `[${payload.who}] ${payload.subject}`,
+            subject: payload.subject,
             text: `<p>${payload.text}</p>`,
             html: `<p>${payload.text}</p>`,
         }, (error, info) => {
