@@ -8,6 +8,10 @@ let transporter = nodemailer.createTransport({
         // rejectUnauthorized: true,
         minVersion: "TLSv1.2"
     },
+    auth: {
+        user: config.MAIL_USER,
+        pass: config.MAIL_PASS,
+    }
 });
 
 export default {
